@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taskf_lutter/mainscrren.dart';
+import 'package:taskf_lutter/firstScreen.dart';
 
 class NewScreen extends StatelessWidget {
   NewScreen({super.key, required this.name});
@@ -7,20 +7,14 @@ class NewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 238, 217, 209),
-
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-              backgroundColor: Colors.green,
-              radius: 105,
-              child: CircleAvatar(
-                radius: 100,
-                backgroundImage: AssetImage('assets/image/image.png'),
-              ),
+              radius: 100,
+              backgroundImage: AssetImage('assets/image/image.png'),
             ),
             SizedBox(height: 80),
             Row(
@@ -37,7 +31,7 @@ class NewScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.green,
+                    color: Colors.red,
                   ),
                 ),
               ],
@@ -50,10 +44,10 @@ class NewScreen extends StatelessWidget {
               'Student at the Faculty of Computers and Artificial Intelligence, Benha University',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
-
+SizedBox(height: 40,),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.green,
+                backgroundColor: Colors.red,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadiusGeometry.circular(2),
                 ),

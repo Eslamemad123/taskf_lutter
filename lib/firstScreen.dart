@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taskf_lutter/new_screen.dart';
+import 'package:taskf_lutter/secondScreen.dart';
 
 class mainscrren extends StatelessWidget {
   mainscrren({super.key});
@@ -9,7 +9,6 @@ class mainscrren extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 238, 217, 209),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -19,7 +18,7 @@ class mainscrren extends StatelessWidget {
               Text(
                 'Enter Your Name ',
                 style: TextStyle(
-                  color: Colors.green,
+                  color: Colors.red,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
@@ -31,10 +30,10 @@ class mainscrren extends StatelessWidget {
                 decoration: InputDecoration(
                   label: Text('Name'),
                   filled: true,
-                  fillColor: const Color.fromARGB(255, 230, 227, 227),
+                  fillColor: const Color.fromARGB(255, 253, 250, 250),
                   suffixIcon: Padding(
                     padding: const EdgeInsets.only(left: 5),
-                    child: Icon(Icons.person, color: Colors.brown),
+                    child: Icon(Icons.person, color: Colors.red),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(7),
@@ -47,7 +46,7 @@ class mainscrren extends StatelessWidget {
               SizedBox(height: 20),
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
+                  backgroundColor: Colors.red,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadiusGeometry.circular(7),
                   ),

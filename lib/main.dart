@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taskf_lutter/mainscrren.dart';
-import 'package:taskf_lutter/new_screen.dart';
+import 'package:taskf_lutter/firstScreen.dart';
+import 'package:taskf_lutter/secondScreen.dart';
 
 void main() {
   runApp(MainApp());
