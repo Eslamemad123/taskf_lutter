@@ -15,8 +15,12 @@ class NewScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             CircleAvatar(
-              radius: 100,
-              backgroundImage: AssetImage('assets/image/image.png'),
+              backgroundColor: Colors.green,
+              radius: 105,
+              child: CircleAvatar(
+                radius: 100,
+                backgroundImage: AssetImage('assets/image/image.png'),
+              ),
             ),
             SizedBox(height: 80),
             Row(
@@ -33,7 +37,7 @@ class NewScreen extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,
-                    color: Colors.brown,
+                    color: Colors.green,
                   ),
                 ),
               ],
@@ -45,6 +49,20 @@ class NewScreen extends StatelessWidget {
 
               'Student at the Faculty of Computers and Artificial Intelligence, Benha University',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
+            ),
+
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.green,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadiusGeometry.circular(2),
+                ),
+              ),
+              onPressed: () {},
+              child: Text(
+                'Download Resume',
+                style: TextStyle(color: Colors.white),
+              ),
             ),
           ],
         ),
