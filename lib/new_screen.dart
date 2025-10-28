@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taskf_lutter/mainscrren.dart';
 
 class NewScreen extends StatelessWidget {
   NewScreen({super.key, required this.name});
@@ -29,6 +30,24 @@ class NewScreen extends StatelessWidget {
               'Amet minim mollit non deserunt ullamco estsit aliqua dolor do amet Sint. Velit officiaconsequat duis enim velit mollit. Exercitationveniam consequat sunt nostrud amet.',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
+            ElevatedButton(
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                onPressed: () {
+                 
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) =>
+                            mainscrren(),
+                      ),
+                    );
+                  
+                },
+                child: Text(
+                  'Go to First Scrren --> ',
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
           ],
         ),
       ),

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:taskf_lutter/new_screen.dart';
 
 class mainscrren extends StatelessWidget {
-  const mainscrren({super.key, required this.NameController});
+  mainscrren({super.key});
 
-  final TextEditingController? NameController;
+  TextEditingController? NameController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,7 @@ class mainscrren extends StatelessWidget {
                 style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
                 onPressed: () {
                   if (NameController!.text.isNotEmpty) {
-                    Navigator.push(
+                    Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
                         builder: (context) =>
