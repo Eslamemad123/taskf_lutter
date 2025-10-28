@@ -9,6 +9,7 @@ class mainscrren extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 238, 217, 209),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0),
@@ -16,9 +17,9 @@ class mainscrren extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                'Enter Your Name !',
+                'Enter Your Name ',
                 style: TextStyle(
-                  color: Colors.lightBlue,
+                  color: Colors.brown,
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
@@ -33,19 +34,24 @@ class mainscrren extends StatelessWidget {
                   fillColor: const Color.fromARGB(255, 230, 227, 227),
                   suffixIcon: Padding(
                     padding: const EdgeInsets.only(left: 5),
-                    child: Icon(Icons.person, color: Colors.blue),
+                    child: Icon(Icons.person, color: Colors.brown),
                   ),
                   enabledBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(7),
                   ),
                   focusedBorder: OutlineInputBorder(
-                    borderRadius: BorderRadius.circular(15),
+                    borderRadius: BorderRadius.circular(7),
                   ),
                 ),
               ),
               SizedBox(height: 20),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.brown,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadiusGeometry.circular(7),
+                  ),
+                ),
                 onPressed: () {
                   if (NameController!.text.isNotEmpty) {
                     Navigator.pushReplacement(
@@ -57,8 +63,9 @@ class mainscrren extends StatelessWidget {
                     );
                   }
                 },
+
                 child: Text(
-                  'Go to Second Scrren --> ',
+                  'Go to Profile Scrren  ',
                   style: TextStyle(color: Colors.white),
                 ),
               ),

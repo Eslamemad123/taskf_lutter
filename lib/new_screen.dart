@@ -7,6 +7,8 @@ class NewScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 238, 217, 209),
+
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -17,37 +19,33 @@ class NewScreen extends StatelessWidget {
               backgroundImage: AssetImage('assets/image/image.png'),
             ),
             SizedBox(height: 80),
-            Text(
-              textAlign: TextAlign.center,
-              'Hi, I am\n ${name}\n,CreativeTechnologist',
-              style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  textAlign: TextAlign.center,
+                  ' I am',
+                  style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
+                ),
+                Text(
+                  textAlign: TextAlign.center,
+                  ' ${name}',
+                  style: TextStyle(
+                    fontSize: 30,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.brown,
+                  ),
+                ),
+              ],
             ),
             SizedBox(height: 50),
 
             Text(
               textAlign: TextAlign.center,
 
-              'Amet minim mollit non deserunt ullamco estsit aliqua dolor do amet Sint. Velit officiaconsequat duis enim velit mollit. Exercitationveniam consequat sunt nostrud amet.',
+              'Student at the Faculty of Computers and Artificial Intelligence, Benha University',
               style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
             ),
-            ElevatedButton(
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-                onPressed: () {
-                 
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            mainscrren(),
-                      ),
-                    );
-                  
-                },
-                child: Text(
-                  'Go to First Scrren --> ',
-                  style: TextStyle(color: Colors.white),
-                ),
-              ),
           ],
         ),
       ),
