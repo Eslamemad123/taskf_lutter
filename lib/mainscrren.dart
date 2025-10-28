@@ -68,29 +68,6 @@ class mainscrren extends StatelessWidget {
                   'Go to Profile Scrren  ',
                   style: TextStyle(color: Colors.white),
                 ),
-              ), ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.green,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadiusGeometry.circular(7),
-                  ),
-                ),
-                onPressed: () {
-                  if (NameController!.text.isNotEmpty) {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) =>
-                            NewScreen(name: NameController!.text),
-                      ),
-                    );
-                  }
-                },
-
-                child: Text(
-                  'Go to Profile Scrren  ',
-                  style: TextStyle(color: Colors.white),
-                ),
               ),
             ],
           ),
